@@ -1,0 +1,66 @@
+[package]
+name = "civicchain-node"
+version = "0.1.0"
+authors = ["Beltrano"]
+edition = "2025"
+license = "MIT"
+publish = false
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[[bin]]
+name = "civicchain-node"
+path = "src/main.rs"
+
+[dependencies]
+# Substrate dependencies
+clap = { workspace = true }
+futures = { workspace = true }
+jsonrpsee = { workspace = true }
+log = { workspace = true }
+parity-scale-codec = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+
+sc-basic-authorship = { workspace = true }
+sc-chain-spec = { workspace = true }
+sc-cli = { workspace = true }
+sc-client-api = { workspace = true }
+sc-consensus = { workspace = true }
+sc-consensus-pow = { workspace = true }
+sc-executor = { workspace = true }
+sc-network = { workspace = true }
+sc-rpc = { workspace = true }
+sc-service = { workspace = true }
+sc-telemetry = { workspace = true }
+sc-transaction-pool = { workspace = true }
+sc-transaction-pool-api = { workspace = true }
+sp-api = { workspace = true }
+sp-block-builder = { workspace = true }
+sp-blockchain = { workspace = true }
+sp-consensus = { workspace = true }
+sp-consensus-pow = { workspace = true }
+sp-core = { workspace = true }
+sp-inherents = { workspace = true }
+sp-keyring = { workspace = true }
+sp-offchain = { workspace = true }
+sp-runtime = { workspace = true }
+sp-timestamp = { workspace = true }
+sp-transaction-pool = { workspace = true }
+substrate-frame-rpc-system = { workspace = true }
+substrate-prometheus-endpoint = { workspace = true }
+
+# Local dependencies
+civicchain-runtime = { path = "../runtime" }
+civicchain-pow = { path = "../pallets/pow" }
+
+[build-dependencies]
+substrate-build-script-utils = { workspace = true }
+
+[features]
+default = []
+runtime-benchmarks = [
+    "civicchain-runtime/runtime-benchmarks",
+    "sc-service/runtime-benchmarks",
+]

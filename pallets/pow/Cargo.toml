@@ -1,0 +1,49 @@
+[package]
+name = "civicchain-pow"
+version = "0.1.0"
+authors = ["Beltrano"]
+edition = "2025"
+license = "MIT"
+publish = false
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[dependencies]
+# Substrate dependencies
+parity-scale-codec = { workspace = true, features = ["derive"] }
+scale-info = { workspace = true, features = ["derive"] }
+frame-support = { workspace = true }
+frame-system = { workspace = true }
+sp-consensus-pow = { workspace = true }
+sp-core = { workspace = true }
+sp-io = { workspace = true }
+sp-runtime = { workspace = true }
+sp-std = { git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v1.0.0", default-features = false }
+
+# Other dependencies
+log = { workspace = true }
+sha2 = { workspace = true }
+sha3 = { workspace = true }
+yesha256 = { workspace = true }
+rand = { workspace = true }
+hex = { workspace = true }
+merkle-light = { workspace = true }
+zeroize = { workspace = true }
+
+[features]
+default = ["std"]
+std = [
+    "parity-scale-codec/std",
+    "scale-info/std",
+    "frame-support/std",
+    "frame-system/std",
+    "sp-consensus-pow/std",
+    "sp-core/std",
+    "sp-io/std",
+    "sp-runtime/std",
+    "sp-std/std",
+    "log/std",
+    "sha2/std",
+    "sha3/std",
+]

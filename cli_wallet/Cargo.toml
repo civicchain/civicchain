@@ -1,0 +1,39 @@
+[package]
+name = "civicchain-cli-wallet"
+version = "0.1.0"
+authors = ["Beltrano"]
+edition = "2021"
+license = "MIT"
+publish = false
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[[bin]]
+name = "civicchain-wallet"
+path = "src/main.rs"
+
+[dependencies]
+# Substrate dependencies
+clap = { workspace = true, features = ["derive"] }
+futures = { workspace = true }
+jsonrpsee = { workspace = true, features = ["client"] }
+log = { workspace = true }
+parity-scale-codec = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+sp-core = { workspace = true }
+sp-keyring = { workspace = true }
+sp-runtime = { workspace = true }
+
+# Other dependencies
+anyhow = "1.0.71"
+env_logger = "0.10.0"
+hex = { workspace = true }
+rand = { workspace = true }
+reqwest = { version = "0.11.18", features = ["json", "blocking"] }
+tokio = { version = "1.28.2", features = ["full"] }
+url = "2.3.1"
+
+# Local dependencies
+civicchain-runtime = { path = "../runtime" }

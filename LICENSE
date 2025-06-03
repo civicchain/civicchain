@@ -2,6 +2,7 @@ MIT License
 
 Copyright (c) 2025 CivicChain
 
+
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -9,8 +10,24 @@ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. The above copyright notice and this permission notice shall be included in all
+   copies or substantial portions of the Software.
+
+2. Derivative works must provide explicit attribution to the original project
+   with a functional link to the official repository (https://github.com/civicchain/civicchain/) in their documentation and primary user interface.
+
+3. Governance contributions are subject to additional terms outlined in the
+   project's GOVERNANCE.md file and require digital acceptance of the
+   Contributor License Agreement (CLA.md).
+
+4. Commercial implementations are encouraged but not required to support the
+   project's sustainability through voluntary donations to the official address Bitcoin: bc1qx4dxgwlpngpgmup7m3et0s73dt38gnrk84t5y5. 
+
+5. The project maintainers reserve the right to revoke permissions from entities
+   that engage in:
+   - Malicious fork attempts
+   - Trademark infringement
+   - Actions threatening network security
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
